@@ -1,0 +1,29 @@
+<%= render 'navbar' %>
+
+<div class="container">
+  <h1 style=' margin: 24px 0;'>
+    Available Flats (<%= @flats.count %>)
+  </h1>
+  <p style=' margin: 24px 0;'><%= @message %></p>
+  <div class='flat-grid'>
+  <% @flats.each do |flat| %>
+    <div class="card d-flex flex-direction-column justify-content-between">
+    <img src="<%= flat.image_url %>" alt="">
+    <div class='info-container'>
+      <h3><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <div class='d-flex'>
+        <p><i class="fa-solid fa-user"></i> <%= flat.number_of_guests %></p>
+        <p style="margin-left: 24px;"><i class="fa-solid fa-sterling-sign"></i> <%= flat.price_per_night %></p>
+      </div>
+    </div>
+    <div class="flat-card-footer">
+      <%= link_to 'more info', flat_path(flat), class: 'text-primary' %>
+      <%= link_to 'edit', edit_flat_path(flat), class: 'text-warning' %>
+      <%= link_to 'delete', flat_path(flat), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'text-danger' %>
+    </div>
+    </div>
+  <% end %>
+  </div>
+
+</div>

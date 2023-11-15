@@ -1,0 +1,21 @@
+<%= render 'navbar' %>
+<div class="banner">
+<img src="<%= @flat.image_url%>" alt="">
+</div>
+<div class="container">
+  <div>
+    <h2><%= @flat.name %></h2>
+    <p><%= @flat.address %></p>
+  </div>
+  <div>
+    <h2>A bit more about this flat...</h2>
+    <p><%= @flat.description %></p>
+  </div>
+  <div>
+    <h2>details</h2>
+        <div class='d-flex'>
+          <p style='margin-right: 24px;'><i class="fa-solid fa-user"></i> <%= @flat.number_of_guests %></p>
+          <p style='margin-right: 24px;'><i class="fa-solid fa-sterling-sign"></i> <%= @flat.price_per_night %></p>
+        </div>
+  </div>
+</div>

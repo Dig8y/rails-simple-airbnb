@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+ .flat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 32px;
+  column-gap: 32px;
+ }
+
+ .card {
+  background-color: rgb(240, 240, 240);
+ }
+
+ .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+ }
+
+a:link {
+  text-decoration: none;
+ }
+
+ .flat-card-footer {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+ }
+ .flat-card-footer a:link {
+  margin-right: 24px;
+ }
+
+ .info-container {
+  padding: 24px;
+ }
+
+ .banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+
+ }

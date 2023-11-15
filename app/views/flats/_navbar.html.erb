@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light justify-content-between px-5">
+  <%= link_to flats_path  do %>
+  <h2 class="navbar-brand">Simple AirBnb</h2>
+  <% end %>
+  <div class="d-flex">
+
+  <%= form_with url: flats_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query, params[:query], class: "form-control mx-2" %>
+  <%= submit_tag "search", class: 'btn btn-outline-success my-2 my-sm-0 mx-2' %>
+  <% end %>
+  <%= link_to '<button class="btn btn-primary my-2 my-sm-0" type="submit">Add flat</button>'.html_safe, new_flat_path %>
+  </div>
+</nav>
